@@ -55,8 +55,8 @@
         }
       }
       button :hover {
-        width: 55px;
-        height: 55px;
+        width: 53px;
+        height: 53px;
       }
     }
     h4 {
@@ -83,9 +83,10 @@
       background-color: white;
       transition: 0.5s;
       margin-left: 20px;
+      font-size: 15px;
     }
     button :hover {
-      font-size: 16px;
+      font-size: 15.3px;
       text-decoration: underline;
       color: #0000ff;
     }
