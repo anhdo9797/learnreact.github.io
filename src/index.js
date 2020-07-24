@@ -17,16 +17,16 @@ import MoreCourses from "./component/home/MoreCourses";
 export default function App() {
   return (
     <BrowserRouter>
-      <Router>
+      <HashRouter>
         <div>
           <Switch>
             <Route path="/" exact component={login} />
-            <Route path="/dang-ki" exact component={register} />
-            <Route path="/quen-mat-khau" exact component={ForgetAccount} />
+            <Route path="/dang-ki" component={register} />
+            <Route path="/quen-mat-khau" component={ForgetAccount} />
             <Route path="/trang-chu" component={Home} />
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     </BrowserRouter>
   );
 }

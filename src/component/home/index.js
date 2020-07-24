@@ -30,7 +30,6 @@ export default ({ match }) => {
             <li
               key={index}
               className={item.ulr === typeFocus ? "focusTag" : null}
-              // className={"focusTag"}
             >
               <Link className="link" to={`${match.url}/${item.ulr}`}>
                 {item.label}
@@ -52,7 +51,6 @@ export default ({ match }) => {
             return <MoreCourses match={match} />;
           } else {
             setFocusType(match.params.name);
-
             return <MyCourse match={match} />;
           }
         }}

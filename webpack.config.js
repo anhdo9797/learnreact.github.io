@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
 
   module: {
@@ -35,12 +36,11 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ],
+        test: /\.(jpg|png|svg|gif)$/,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
       },
       {
         test: /\.svg$/,

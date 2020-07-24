@@ -1,6 +1,7 @@
 .wrapMenu {
   background-color: #e96443;
   border-radius: 0;
+  margin: 0;
   .ulrNav {
     background-color: #e96443;
     color: white;
@@ -9,6 +10,7 @@
     list-style: none;
     height: 50px;
     text-decoration: none;
+    margin: 0;
 
     li {
       font-size: 20px;
@@ -60,4 +62,5 @@
 .backgroundPage {
   background: linear-gradient(to bottom right, #ffff, #e0e0e0);
   min-height: 100vh;
+  // background-color: red;
 }
