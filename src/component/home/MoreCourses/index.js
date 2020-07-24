@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import { Card } from "../../card";
 import { listCourses } from "../../../data/listCourses";
@@ -14,20 +14,26 @@ const ItemMenu = ({ label }) => {
     </li>
   );
 };
+const listMenu = [
+  { label: "Lập trình" },
+  { label: "Kĩ năng" },
+  { label: "Ngoại ngữ" },
+  { label: "Âm nhạc" },
+  { label: "Thiết kế" },
+  { label: "Kinh doanh khởi nhiệp" },
+  { label: "Multimedia" },
+];
 
 export default ({ match }) => {
+  const [focusMenu, setFocusMenu] = useState("");
   return (
     <div className="backgroundPage containerRow ">
       <div className="Menu ">
         <ul>
           <div className="LabelMenu">Danh sách khóa học </div>
-          <ItemMenu label="Lập trình" />
-          <ItemMenu label="Kĩ năng" />
-          <ItemMenu label="Ngoại ngữ" />
-          <ItemMenu label="Âm nhạc" />
-          <ItemMenu label="Thiết kế" />
-          <ItemMenu label="Kinh doanh khởi nhiệp" />
-          <ItemMenu label="Multimedia" />
+          {listMenu.map((e) => (
+            <ItemMenu label={e.label} />
+          ))}
         </ul>
       </div>
       <div className="showList">
