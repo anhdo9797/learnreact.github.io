@@ -7,12 +7,7 @@ import {
   HashRouter,
   BrowserRouter,
 } from "react-router-dom";
-import login from "./component/Authentication/login";
-import register from "./component/Authentication/register";
-import ForgetAccount from "./component/Authentication/ForgetAccount";
-import Home from "./component/home";
-import Profiler from "./component/home/Profile";
-import MoreCourses from "./component/home/MoreCourses";
+import Authentication from "./components/authentication";
 
 export default function App() {
   return (
@@ -20,10 +15,7 @@ export default function App() {
       <HashRouter>
         <div>
           <Switch>
-            <Route path="/" exact component={login} />
-            <Route path="/dang-ki" component={register} />
-            <Route path="/quen-mat-khau" component={ForgetAccount} />
-            <Route path="/trang-chu" component={Home} />
+            <Authentication />
           </Switch>
         </div>
       </HashRouter>
